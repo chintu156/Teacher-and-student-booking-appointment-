@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <title>Student-Teacher Appointment Booking</title>
+    <link rel="stylesheet" href="Teacher.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Appointment Booking</h1>
+        <form id="appointmentForm">
+            <label for="studentName">Student Name:</label>
+            <input type="text" id="studentName" required>
+            
+            <label for="teacher">Teacher:</label>
+            <select id="teacher" required>
+                <option value="">Select a Teacher</option>
+                <option value="Teacher 1">Teacher 1</option>
+                <option value="Teacher 2">Teacher 2</option>
+                <option value="Teacher 3">Teacher 3</option>
+               
+            </select>
+            
+            <label for="dateTime">Date and Time:</label>
+            <input type="datetime-local" id="dateTime" required>
+            
+            <button type="submit">Book Appointment</button>
+        </form>
+        
+        <div id="appointments">
+            <!-- Appointments will be displayed here -->
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
+    <script src="Appoinment.js"></script>
+</body>
+</html>
